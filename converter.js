@@ -1,10 +1,11 @@
 module.exports.convertHextoRGB= function(hex){
 // take in hex 
-    let bigint = parseInt(hex, 16);
-    let r = (bigint >> 16) & 255;
-    let g = (bigint >> 8) & 255;
-    let b = bigint & 255;
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  console.log('result:' + result);
+    r = parseInt(result[1], 16);
+    g = parseInt(result[2], 16);
+    b = parseInt(result[3], 16);
+console.log('rgb( ' + r + "," + g + "," + b + ' )');
 
-    return 'rgb( ' + r + "," + g + "," + b + ' )';
 
 }
