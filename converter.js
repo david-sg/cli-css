@@ -7,5 +7,7 @@ module.exports.convertHextoRGB= function(hex){
     b = parseInt(result[3], 16);
 console.log('rgb( ' + r + "," + g + "," + b + ' )');
 
+output = {r:r, g:g,b:b};
+return output;
 
 }
